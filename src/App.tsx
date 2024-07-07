@@ -1,25 +1,26 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import './App.css';
 
-import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import './App.css'
-
-//importing pages
+// Importing pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 
 function App() {
- 
-
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element = {<Home/>} />
-      <Route path ="/about" element = {<About/>} />
-      <Route path = "/projects" element = {<Projects />} />
-    </Routes>
-    
+      <TransitionGroup>
+        <CSSTransition timeout={300} classNames="page" unmountOnExit>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

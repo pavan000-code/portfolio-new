@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+.about-title {
+  font-family: 'Dancing Script', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.about-title-enter {
+  font-size: 30vw;
+  opacity: 1;
+}
+
+.about-title-enter-active {
+  font-size: 6vw; /* Final smaller font size */
+  opacity: 1;
+  transition: font-size 2s, opacity 2s;
+}
+
+.about-title-exit {
+  font-size: 6vw;
+  opacity: 1;
+}
+
+.about-title-exit-active {
+  font-size: 6vw;
+  opacity: 0;
+  transition: opacity 2s;
+}
